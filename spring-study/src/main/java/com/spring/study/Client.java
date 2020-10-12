@@ -4,6 +4,7 @@ import com.spring.study.config.ConfigClass;
 import com.spring.study.service.CustomizeFactoryBean;
 import com.spring.study.service.ServiceA;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * @author ：tengu
@@ -17,6 +18,8 @@ public class Client {
 
 		AnnotationConfigApplicationContext applicationContext =
 				new AnnotationConfigApplicationContext(ConfigClass.class);
+
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring.xml");
 
 //		CustomizeService customizeService = applicationContext.getBean(CustomizeService.class);
 
