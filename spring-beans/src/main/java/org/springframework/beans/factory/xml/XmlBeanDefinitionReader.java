@@ -390,7 +390,9 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 			throws BeanDefinitionStoreException {
 
 		try {
+			// 方法是从特定 XML 文件中实际载入Bean 配置资源的方法，该方法在载入 Bean 配置资源之后将其转换为 Document 对象
 			Document doc = doLoadDocument(inputSource, resource);
+			// 启动ioc容易对bean定义解析过程 将上一步获取到的docment对象解析成BeanDefinition对象
 			int count = registerBeanDefinitions(doc, resource);
 			if (logger.isDebugEnabled()) {
 				logger.debug("Loaded " + count + " bean definitions from " + resource);
