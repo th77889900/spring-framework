@@ -23,7 +23,11 @@ public class Client {
 
 		CustomizeService customizeService = applicationContext.getBean(CustomizeService.class);
 
+
+
 		ServiceB serviceB = applicationContext.getBean(ServiceB.class);
+
+		// nihao
 
 		serviceB.get();
 

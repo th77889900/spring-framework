@@ -57,14 +57,14 @@ public class AnnotationConfigApplicationContext extends GenericApplicationContex
 
 	private final ClassPathBeanDefinitionScanner scanner;
 
-
 	/**
 	 * Create a new AnnotationConfigApplicationContext that needs to be populated
 	 * through {@link #register} calls and then manually {@linkplain #refresh refreshed}.
 	 */
 	public AnnotationConfigApplicationContext() {
-		//
+		// 读取器 扫描包的工作也是在这个reader中完成的
 		this.reader = new AnnotatedBeanDefinitionReader(this);
+		//
 		this.scanner = new ClassPathBeanDefinitionScanner(this);
 	}
 
